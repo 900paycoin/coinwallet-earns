@@ -1,0 +1,346 @@
+<html lang="en" class="h-100"><head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Bitrixe - Activate account </title> 
+    <!-- Favicon icon --> 
+    <link rel="icon" type="image/png" sizes="16x16" href="https://bitrixe.com/favicon.ico"> 
+    <!-- Custom Stylesheet --> 
+    <link href="https://bitrixe.com/hodo/css/theme.css" rel="stylesheet" type="text/css"> 
+    <link rel="stylesheet" href="https://bitrixe.com/hodo/css/style.css"> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <meta name="description" content=""> 
+    <meta name="author" content=""> 
+    <meta name="generator" content=""> 
+    <!-- manifest meta --> 
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <!-- Favicons --> 
+    <link rel="apple-touch-icon" href="img/favicon180.png" sizes="180x180"> 
+    <link rel="icon" href="img/favicon32.png" sizes="32x32" type="image/png"> 
+    <link rel="icon" href="img/favicon16.png" sizes="16x16" type="image/png"> 
+    <!-- Material icons--> 
+    <link href="../../../icon?family=Material+Icons" rel="stylesheet"> 
+    <!-- Google fonts--> 
+    <link href="../../../css2?family=Roboto:wght@300;400;500&amp;display=swap" rel="stylesheet"> 
+    <!-- swiper CSS --> 
+    <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet"> 
+    <!-- Custom styles for this template --> 
+    <link href="css/style.css" rel="stylesheet" id="style"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style type="text/css">
+          #back-to-top {
+              /* display: none; */
+              position: fixed;
+              z-index: 1030;
+              bottom: 75px;
+              right: 75px;
+              /* background-color: rgba(0, 0, 0, 0.2); */
+              background-color: #fff;
+              text-align: center;
+              color: #fff;
+              font-size: 1000px;
+              width: 100px;
+              height: 100px;
+              line-height: 100px;
+              border-radius: 50%;
+              -webkit-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              -webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+              box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+          }
+      </style> 
+   </head> 
+   <body>
+    <div id="preloader" style="opacity: 0.977432;"> 
+     <div class="sk-three-bounce"> 
+      <div class="sk-child sk-bounce1"></div> 
+      <div class="sk-child sk-bounce2"></div> 
+      <div class="sk-child sk-bounce3"></div> 
+     </div> 
+    </div> 
+    <div id="main-wrapper" class="show"> 
+     <div class="authincation section-padding"> 
+      <div class="container h-100"> 
+       <main class="flex-shrink-0 main has-footer"> 
+        <!-- Fixed navbar --> 
+        <div class="container h-100 text-white"> 
+         <div class="row h-100"> 
+          <div class="col-12 align-self-center mb-4"> 
+           <div class="row justify-content-center"> 
+            <div class="col-md-6"> 
+             <div class="card-body"> 
+              <div class="mini-logo text-center my-4"> 
+               <a href="https://bitrixe.com"><span class="port-icon"> <img class="img-fluid" src="https://bitrixe.com/hodo/images/logo.png" alt="" style="width:55px; height:55px;"></span></a> 
+               <nav class="navbar navbar-expand-lg navbar-light navbar-default" role="navigation"> 
+                <div class="container"> 
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+                  <ul class="navbar-nav my-2 my-lg-0"> 
+                   <li class="nav-item"><a class="nav-link" href="https://bitrixe.com/dashboard"></a> </li> 
+                   <li class="nav-item"> <a class="nav-link" href="https://bitrixe.com/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> </a> 
+                    <form id="logout-form" action="https://bitrixe.com/logout" method="POST" style="display: none;"> 
+                     <input type="hidden" name="_token" value="TcqZLtEBvN55VHGx6RAJvswRMjOzaSbMCXHf1VtL">
+                    </form> </li> 
+                  </ul> 
+                 </div> 
+                </div> 
+               </nav> 
+               <div class="container"> 
+
+
+
+
+                <div class="buy-sell-widget">
+                    <ul class="nav nav-tabs">
+                    <li class="nav-item"><a id="depositTab" onclick="displayPortfolio('depositSelect');menuToggler('deposit');" class="nav-link" data-toggle="tab" href="file:///C:/Users/6000/index.html/index.html/index.htmi3.html">DEPOSIT</a>
+                    </li>
+                    <li class="nav-item"><a id="withdrawTab" onclick="displayPortfolio('withdrawSelect');menuToggler('withdraw');" class="nav-link active" data-toggle="tab" href="#sell">WITHDRAW</a>
+                    </li>
+                    </ul>
+                    <div class="tab-content tab-content-default">
+                    <div class="tab-pane fade" id="buy" role="tabpanel">
+                    <div id="errorBoxDeposit" class="alert alert-danger show flex items-center mb-2" style="display: none;"></div>
+                    <form method="post" name="myform" class="currency_validate" novalidate="novalidate" onsubmit="event.preventDefault(); deposit();">
+                    <div class="form-group">
+                    <label class="mr-sm-2">Portfolio</label>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <label class="input-group-text"><i class="cc BTC-alt"></i></label>
+                    </div>
+                    <select id="depositSelect" onchange="displayPortfolio('depositSelect');balConvertD('depositSelect');" name="portfolio" class="form-control">
+                    <option value="196268" selected=""> Portfolio 3 || 0.0000 BTC</option>
+                    <option value="194981"> Portfolio 2 || 42.0004 BTC</option>
+                    </select>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label class="mr-sm-2">Enter your amount</label>
+                    <div class="input-group">
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^0-9.]/gi, '');btcConvertDeposit('depositSelect');" id="btcAmountDeposit" name="currency_amount" class="form-control" placeholder="0.0214 BTC">
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^0-9.]/gi, '');cashConvertDeposit('depositSelect');" id="cashAmountDeposit" name="usd_amount" class="form-control" placeholder="125.00 USD">
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                    <p class="mb-0">New Balance</p>
+                    <h6 id="newBalanceDeposit" class="mb-0"></h6>
+                    </div>
+                     </div>
+
+                     <a href="file:///C:/Users/6000/index.html/index.html/index.htmli1.html#sell">walletWithdraw</a>
+
+                    </form>
+                    </div>
+                    <div class="tab-pane fade active show" id="sell">
+                    <div id="errorBoxWithdraw" class="alert alert-danger show flex items-center mb-2" style="display: none;">Please double-check that you entered all fields correctly</div>
+                    <div id="warningBoxWithdraw" class="alert alert-warning show flex items-center mb-2" style="display: block;"><b>savePro™ Activated:</b><br> The requested withdrawal amount is lower than your portfolio minimum withdrawal settings.<br> 
+                         To help you save, you specified a minimum withdrawal limit of <b>42.02 BTC</b> during <a href="#createPortfolio" onclick="navigate(&quot;createPortfolio&quot;);"><b>creation</b></a> of your portfolio.<br>
+                         Ensure your withdrawal is greater/equal to the set amount.<br>NOTE: This configuration cannot be disabled or adjusted after portfolio creation.</div>
+                    <div class="form-group">
+                    <label class="mr-sm-2">Portfolio</label>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <label class="input-group-text"><i class="cc BTC-alt"></i></label>
+                    </div>
+                    <select id="withdrawSelect" onchange="displayPortfolio('withdrawSelect');balConvertW('withdrawSelect');" name="portfolio" class="form-control">
+                    <option value="194981"> Portfolio 2 || 42.0004 BTC</option>
+                    </select>
+                    </div>
+                    </div>
+                    <span id="typeChooser" style="display: none;">
+                    <b> Where are you withdrawing to ? </b>
+                    <table width="100%">
+                    <tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr>
+                    <td><label>
+                    <input type="radio" name="destinationType" value="wallet" onclick="document.getElementById('typeChooser').style.display='none';
+                                                                         document.getElementById('walletWithdraw').style.display='block';
+                                                                         document.getElementById('bankWithdraw').style.display='none';
+                                                                         ">
+                    Bitcoin Wallet</label></td>
+                    <td><label>
+                    <input type="radio" name="destinationType" value="bank" onclick="document.getElementById('typeChooser').style.display='none';
+                                                                         document.getElementById('walletWithdraw').style.display='none';
+                                                                         document.getElementById('bankWithdraw').style.display='block';
+                                                                         ">
+                    Bank Account</label></td>
+                    </tr>
+                    </tbody></table>
+                    </span>
+                    
+                    <span id="bankWithdraw" style="display:none">
+                    <form id="withdraw1" style="display:block;" method="post" name="myform" class="currency2_validate" novalidate="novalidate" onsubmit="event.preventDefault(); withdraw('bank');">
+                    <div><table width="100%">
+                    <tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr>
+                    <td><label>
+                    <input type="radio" id="destinationType3a" name="destinationType3" value="wallet" onclick="document.getElementById('typeChooser').style.display='none';
+                                                                         document.getElementById('walletWithdraw').style.display='block';
+                                                                         document.getElementById('bankWithdraw').style.display='none';
+                                                                         this.checked=false;
+                                                                         document.getElementById('destinationType3b').checked=true;">
+                    Bitcoin Wallet</label></td>
+                    <td><label>
+                    <input type="radio" id="destinationType3b" name="destinationType3" value="bank" onclick="document.getElementById('typeChooser').style.display='none';
+                                                                         document.getElementById('walletWithdraw').style.display='none';
+                                                                         document.getElementById('bankWithdraw').style.display='block';
+                                                                         " checked="">
+                    Bank Account</label></td>
+                    </tr>
+                    <tr><td></td></tr>
+                    </tbody></table></div>
+                    <div>&nbsp;</div>
+                    <div class="form-group">
+                    <label class="mr-sm-2">Beneficiary</label>
+                    <span id="yesBene" style="display:none;"> <table><tbody><tr width="100%"><td width="80%" align="left" id="bankBeneficiary"></td></tr>
+                    <tr width="100%"><td width="80%" align="left" id="bankAccount"></td></tr>
+                    <tr width="100%"><td width="80%" align="left" id="bankName"></td><td width="20%" align="right" id="bankCountry"></td></tr>
+                    </tbody></table>
+                    <input type="hidden" id="bankRecipient" value="">
+                    <input type="hidden" id="bankRate" value="0">
+                    <input type="hidden" id="bankCurrency" value="">
+                    </span>
+                    <span id="noBene" style="display:block;"><a href="#" onclick="document.getElementById('addModal').style.display='block';"><font color="secondary"><i class="fa fa-plus"></i> Add Beneficiary</font> </a></span>
+                    </div>
+                    <span id="completeForm" style="display:none;">
+                    <div class="form-group">
+                    <label class="mr-sm-2">Enter your amount</label>
+                    <div class="input-group">
+                     <input type="text" onkeyup="this.value=this.value.replace(/[^0-9.]/gi, '');btcConvertWithdraw('withdrawSelect');" id="btcAmountWithdraw2" name="currency_amount" class="form-control" placeholder="0.0214 BTC">
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^0-9.]/gi, '');cashConvertWithdraw('withdrawSelect');" id="cashAmountWithdraw2" name="usd_amount" class="form-control" placeholder="125.00 USD">
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                    <p class="mb-0">New balance</p>
+                    <h6 id="newBalanceWithdraw2" class="mb-0"></h6>
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                    <p class="mb-0">Recipient Receives</p>
+                    <h6 id="bankRate2" class="mb-0"></h6>
+                    </div>
+                    </div>
+                    <a href="file:///C:/Users/6000/index.html/index.html/index.htmli1.html#sell">walletWithdraw</a>
+                    </span>
+                    </form>
+                    </span>
+                    <span id="walletWithdraw" style="display: block;">
+                    <form id="withdraw1b" style="display:block;" method="post" name="myform" class="currency2_validate" novalidate="novalidate" onsubmit="event.preventDefault(); withdraw('wallet');">
+                    <div><table width="100%">
+                    <tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr>
+                    <td><label>
+                    <input type="radio" id="destinationType2a" name="destinationType2" value="wallet" onclick="document.getElementById('typeChooser').style.display='none';
+                                                                         document.getElementById('walletWithdraw').style.display='block';
+                                                                         document.getElementById('bankWithdraw').style.display='none';
+                                                                         " checked="">
+                    Bitcoin Wallet</label></td>
+                    <td><label>
+                    <input type="radio" id="destinationType2b" name="destinationType2" value="bank" onclick="document.getElementById('typeChooser').style.display='none';
+                                                                         document.getElementById('walletWithdraw').style.display='none';
+                                                                         document.getElementById('bankWithdraw').style.display='block';
+                                                                         this.checked=false;
+                                                                         document.getElementById('destinationType2a').checked=true;
+                                                                         ">
+                    Bank Account </label></td>
+                    
+                    </tr>
+                    <tr><td></td></tr>
+                    </tbody></table></div>
+                    <div>&nbsp;</div>
+                    <div class="form-group">
+                    <label class="mr-sm-2">Recipient wallet</label>
+                    <div class="form-group">
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <label class="input-group-text"><i class="fa fa-money"></i></label>
+                    </div>
+                    <input type="text" id="wallet" class="form-control" placeholder="bc1qte4csyqa5yz8gxak5fr7qdgm6ylrr5zg6nnpu6">
+                    </div>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label class="mr-sm-2">Enter your amount</label>
+                    <div class="input-group">
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^0-9.]/gi, '');btcConvertWithdraw('withdrawSelect');" id="btcAmountWithdraw" name="currency_amount" class="form-control" placeholder="0.0214 BTC">
+                    <input type="text" onkeyup="this.value=this.value.replace(/[^0-9.]/gi, '');cashConvertWithdraw('withdrawSelect');" id="cashAmountWithdraw" name="usd_amount" class="form-control" placeholder="125.00 USD">
+                    </div>
+                    <div class="d-flex justify-content-between mt-3">
+                    <p class="mb-0">New balance</p>
+                    <h6 id="newBalanceWithdraw" class="mb-0">26.0004 BTC</h6>
+                    </div>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary btn-block waves-effect"><i class="fa fa-arrow-up">&nbsp;</i>Withdraw
+                    Now</button>
+                    </form>
+                    </span>
+                    <form id="withdraw2" style="display:none;" method="post" name="myform" class="currency2_validate" novalidate="novalidate" onsubmit="event.preventDefault(); withdraw2();">
+                    <div class="form-group">
+                    <label class="mr-sm-2">AUTHENTICATION</label>
+                    <div class="input-group mb-3">
+                    We will send a 6 digit OTP to your registered phone number +2567****8776 to authorize your transaction.
+                    <table width="200">
+                    <tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+                    <tr>
+                    <td><label>
+                    <input type="radio" name="type" value="voice" checked="">
+                    Voice</label></td>
+                    <td><label>
+                    <input type="radio" name="type" value="sms">
+                    Text</label></td>
+                    </tr>
+                    </tbody></table>
+                    </div>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary btn-block waves-effect">Send
+                    </button>
+                    </form>
+                    <form id="withdraw3" style="display:none;" method="post" name="myform" class="currency2_validate" novalidate="novalidate" onsubmit="event.preventDefault(); withdraw3();">
+                    <div class="form-group">
+                    <label class="mr-sm-2">AUTHENTICATION</label>
+                    <div class="input-group mb-3">
+                    <a class="page-back text-muted" href="#" onclick="document.getElementById('withdraw2').style.display='block';
+                                                     document.getElementById('withdraw3').style.display='none';
+                                                    "><span><i class="fa fa-angle-left"></i></span> Change method</a>
+                    Please enter the OTP that was sent to you on +2567****8776.
+                    You may change the delivery method(Voice/Text) if you are experiencing delays receiving your code.
+                    <input type="text" id="code" class="form-control text-center font-weight-bold" value="" maxlength="6" onkeyup="this.value=this.value.replace(/[^0-9]/gi, '');if(this.value.length==6){document.getElementById('verifyButton').disabled=false;}else{
+                                                            document.getElementById('verifyButton').disabled=true}" onchange="this.value=this.value.replace(/[^0-9]/gi, '');if(this.value.length==6){document.getElementById('verifyButton').disabled=false;}">
+                    </div>
+                    </div>
+                    <button id="verifyButton" type="submit" name="submit" class="btn btn-primary btn-block waves-effect" disabled="">Authorize
+                    </button>
+                    </form>
+                    <form id="success" style="display:none" class="identity-upload" action="transactions" onsubmit="event.preventDefault(); navigate('transactions');">
+                    <div class="identity-content">
+                    <span class="icon"><i class="fa fa-check"></i></span>
+                    <h4>Successful</h4>
+                    <p>You portfolio withdrawal has been processed successfully. You may click the button below to
+                    view/track the transaction status. Bitcoin transactions would typically take less than
+                    30mins to confirm and reach your recipient wallet. However, certain network congestions
+                    can cause unusually high delays.</p>
+                     </div>
+                    <div class="text-center">
+                    <button type="submit" class="btn btn-primary pl-5 pr-5 waves-effect">Track</button>
+                    </div>
+                    </form>
+                    </div>
+                    </div>
+                    </div>
+
+       
+
+
+                   
+<a class="text-danger" target="_blank" cd="">Need Help? Contact us!  </a> 
+</div></form> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div>
+</div></main> 
+</div> 
+</div> 
+</div> 
+<a id="back-to-top" data-toggle="tooltip" title="" target="_blank" href="file:///C:/Users/6000/index.html/index.html/index.htmli2.html" data-original-title=""><i class="fa 4x fa-telegram"></i></a> 
+
+
+</body></html>
